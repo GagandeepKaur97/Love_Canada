@@ -1,6 +1,7 @@
 package com.gagan.love_canada;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,15 +21,17 @@ import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapter.viewholder> {
-    private static final String TAG = "recyclerviewadapter";
-    private ArrayList<String> mImagesNames = new ArrayList<>();
+
+
+    ArrayList<canadadetails> canadaAttractionArrayList;
     private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
 
-    public recyclerviewadapter( Context mContext ,ArrayList<String> mImagesNames, ArrayList<String> mImages) {
-        this.mImagesNames = mImagesNames;
+    public recyclerviewadapter( Context mContext , ArrayList<String> mImages, ArrayList<canadadetails> canadaAttractionArrayList) {
+
         this.mImages = mImages;
         this.mContext = mContext;
+        this.canadaAttractionArrayList = canadaAttractionArrayList;
     }
 
 
@@ -41,18 +44,25 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
     }
 
     @Override
-    public void onBindViewHolder( viewholder holder, final int position) {
-        Log.d(TAG,"onBindViewHolder:called.");
+    public void onBindViewHolder(final recyclerviewadapter.viewholder holder, final int position) {
+        canadadetails c1 = this.canadaAttractionArrayList.get(position);
+        holder.imagename.setText(c1.getplacename());
+
         Glide.with(mContext)
                 .asBitmap()
                 .load(mImages.get(position))
                 .into(holder.image);
-        holder.imagename.setText(mImagesNames.get(position));
-        holder.parentLayout.setOnClickListener(new View.OnClickListener(){
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"onClick:clicked on:"+ mImagesNames.get(position));
-                Toast.makeText(mContext,mImagesNames.get(position),Toast.LENGTH_SHORT).show();
+                canadadetails c = canadaAttractionArrayList.get(position);
+                Toast.makeText(holder.itemView.getContext(), "C : " + c.getplacename(), Toast.LENGTH_SHORT).show();
+                Log.d("CLICK", "hello");
+
+                Intent intent = new Intent(holder.itemView.getContext(),placedetails.class);
+                  intent.putExtra("object",c);
+                holder.itemView.getContext().startActivity(intent);
 
             }
 
@@ -63,19 +73,19 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
 
     @Override
     public int getItemCount() {
-        return mImagesNames.size();
+        return canadaAttractionArrayList.size();
     }
 
     public class viewholder extends RecyclerView.ViewHolder {
         CircleImageView image;
         TextView imagename;
-        ConstraintLayout parentLayout;
+
 
         public viewholder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image);
             imagename = itemView.findViewById(R.id.image_name);
-            parentLayout = itemView.findViewById(R.id.parent);
+
         }
     }
 }
