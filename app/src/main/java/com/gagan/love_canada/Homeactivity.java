@@ -1,6 +1,8 @@
 package com.gagan.love_canada;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +20,7 @@ public class Homeactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homeactivity);
         Log.d(TAG, "onCreate :Started.");
+        initImageBitmaps();
     }
 
     private void initImageBitmaps() {
@@ -30,5 +33,13 @@ public class Homeactivity extends AppCompatActivity {
 
         mImageUrls.add("https://i.redd.it/tpsnoz5bzo501.jpg");
         mNames.add("Trondheim");
+        initRecyclerview();
+    }
+    private void initRecyclerview(){
+        Log.d(TAG,"initRecyclerview:init recyclerview.");
+        RecyclerView recyclerView = findViewById(R.id.recyclerview);
+        recyclerviewadapter adapter = new recyclerviewadapter(this,mNames,mImageUrls);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

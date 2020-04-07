@@ -25,7 +25,7 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
     private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
 
-    public recyclerviewadapter(ArrayList<String> mImagesNames, ArrayList<String> mImages, Context mContext) {
+    public recyclerviewadapter( Context mContext ,ArrayList<String> mImagesNames, ArrayList<String> mImages) {
         this.mImagesNames = mImagesNames;
         this.mImages = mImages;
         this.mContext = mContext;
