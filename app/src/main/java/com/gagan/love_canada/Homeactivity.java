@@ -97,35 +97,35 @@ public class Homeactivity extends AppCompatActivity {
     {
         Places = new ArrayList<>();
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(1,"Nigara Fall","6650 Niagara Parkway. (River Rd) Niagara Falls L2G 0L0","toronto","ontario",getString(R.string.Niagra)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(2,"Cn tower","cn","toronto","ontario",getString(R.string.Cntower)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(3,"trobheim","","toronto","ontario",getString(R.string.trondheim)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(4,"Lake-Louise","near lake","alberta","alberta",getString(R.string.lakelouise)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(5,"Whistler","near","t","british",getString(R.string.whistler)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(6,"Banff-National","dvsvsvs","toronto","ontario",getString(R.string.banffnational)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(7,"Stanley-Park","dvsvsvs","toronto","ontario",getString(R.string.stanleypark)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(8,"Butchart","dvsvsvs","toronto","ontario",getString(R.string.butchart)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(9,"Cape-Bretron","dvsvsvs","toronto","ontario",getString(R.string.CapeBretron)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(10,"Peggy","dvsvsvs","toronto","ontario",getString(R.string.peggy)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(11,"Waterton","dvsvsvs","toronto","ontario",getString(R.string.waterton)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(12,"Capilano","dvsvsvs","toronto","ontario",getString(R.string.Capilano)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(13,"Tremblant","dvsvsvs","toronto","ontario",getString(R.string.tremblant)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(14,"Icefield-Skywalk","dvsvsvs","toronto","ontario",getString(R.string.IcefieldSkywalk)));
 
-        Places.add(new canadadetails(1,"Nigara Fall","dvsvsvs","toronto","ontario","fsfs"));
+        Places.add(new canadadetails(15,"Mount-Logan","dvsvsvs","toronto","ontario",getString(R.string.MountLogan)));
 
     }
 
