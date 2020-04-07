@@ -90,7 +90,7 @@ public class Homeactivity extends AppCompatActivity {
      RecyclerView recyclerView = findViewById(R.id.recyclerview);
      recyclerviewadapter adapter = new recyclerviewadapter(this,mImageUrls,Places);
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
     }
 
     private void populatedcountries()
@@ -107,25 +107,25 @@ public class Homeactivity extends AppCompatActivity {
 
         Places.add(new canadadetails(5,"Whistler","near","t","british",getString(R.string.whistler)));
 
-        Places.add(new canadadetails(6,"Banff-National","dvsvsvs","toronto","ontario",getString(R.string.banffnational)));
+        Places.add(new canadadetails(6,"Banff","alberta","toronto","british",getString(R.string.banffnational)));
 
-        Places.add(new canadadetails(7,"Stanley-Park","dvsvsvs","toronto","ontario",getString(R.string.stanleypark)));
+        Places.add(new canadadetails(7,"Stanley-Park","park","toronto","ontario",getString(R.string.stanleypark)));
 
-        Places.add(new canadadetails(8,"Butchart","dvsvsvs","toronto","ontario",getString(R.string.butchart)));
+        Places.add(new canadadetails(8,"Butchart","butchrt","toronto","ontario",getString(R.string.butchart)));
 
-        Places.add(new canadadetails(9,"Cape-Bretron","dvsvsvs","toronto","ontario",getString(R.string.CapeBretron)));
+        Places.add(new canadadetails(9,"CapeBretron","cape","toronto","ontario",getString(R.string.CapeBretron)));
 
         Places.add(new canadadetails(10,"Peggy","dvsvsvs","toronto","ontario",getString(R.string.peggy)));
 
-        Places.add(new canadadetails(11,"Waterton","dvsvsvs","toronto","ontario",getString(R.string.waterton)));
+        Places.add(new canadadetails(11,"Waterton","waterton","toronto","ontario",getString(R.string.waterton)));
 
-        Places.add(new canadadetails(12,"Capilano","dvsvsvs","toronto","ontario",getString(R.string.Capilano)));
+        Places.add(new canadadetails(12,"Capilano","capilano","toronto","ontario",getString(R.string.Capilano)));
 
-        Places.add(new canadadetails(13,"Tremblant","dvsvsvs","toronto","ontario",getString(R.string.tremblant)));
+        Places.add(new canadadetails(13,"Tremblant","tremblant","toronto","ontario",getString(R.string.tremblant)));
 
-        Places.add(new canadadetails(14,"Icefield-Skywalk","dvsvsvs","toronto","ontario",getString(R.string.IcefieldSkywalk)));
+        Places.add(new canadadetails(14,"Icefield","icefield","toronto","ontario",getString(R.string.IcefieldSkywalk)));
 
-        Places.add(new canadadetails(15,"Mount-Logan","dvsvsvs","toronto","ontario",getString(R.string.MountLogan)));
+        Places.add(new canadadetails(15,"MountLogan","mountlogan","toronto","ontario",getString(R.string.MountLogan)));
 
     }
 
